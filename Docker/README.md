@@ -23,7 +23,8 @@ map host port 1234 vào port 4567 của ```container```
 xem địa chỉ vừa được map ở PORTS
 >$ docker ps 
 
-
+ngắt 1 container
+>$ docker stop CONTAINER_ID 
 
 ### Demo scala
 ###### Tải về image docker-scala của lão lukasz từ docker hub 
@@ -44,5 +45,22 @@ của máy tính với thư mục ```/src``` của container
    và quản lý nó giống như một máy tính thông thường.
 
  
+### Mongodb
+
+>$ docker pull mongodb
+
+
+>$ docker images
+
+
+>$ docker run -d -p 127.0.0.1:27017:27017 IMAGE_ID  
+ - Mở trình duyệt lên vào ```127.0.0.1:27017``` để check xem connect được chưa.
+
+
+>$ docker ps   -- để xem danh sách container
+
+
+>$ docker exec -it CONTAINER_ID      -- kết nối tới container
+
  
-  
+>$ mongo để test như bình thường
