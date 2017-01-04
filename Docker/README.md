@@ -47,7 +47,7 @@ của máy tính với thư mục ```/src``` của container
  
 ### Mongodb
 
->$ docker pull mongodb
+>$ docker pull mongo
 
 
 >$ docker images
