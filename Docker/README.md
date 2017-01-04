@@ -54,9 +54,10 @@ của máy tính với thư mục ```/src``` của container
 
 
 >$ docker run -d -p 127.0.0.1:27017:27017 IMAGE_ID  
- - Mở trình duyệt lên vào ```127.0.0.1:27017``` để check xem connect được chưa.
-
-
+ - Ở máy thật: vào ```127.0.0.1:27017``` để check kết nối.
+ - Hoặc >$ mongo
+ 
+ 
 >$ docker ps   -- để xem danh sách container
 
 
