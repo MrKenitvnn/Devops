@@ -60,7 +60,7 @@ của máy tính với thư mục ```/src``` của container
 >$ docker ps   -- để xem danh sách container
 
 
->$ docker exec -it CONTAINER_ID      -- kết nối tới container
+>$ docker exec -it CONTAINER_ID bash     -- kết nối tới container
 
  
 >$ mongo để test như bình thường
