@@ -19,8 +19,10 @@ Danh sách các box xem tại: https://vagrantcloud.com/discover/featured
 
 Tạo một thư mục riêng cho nó
 >$ cd /Desktop
+
 >$ mkdir vmCentOS7
->$ vagrant init centos7
+
+>$ vagrant init geerlingguy/centos7
 
 Sửa file ```Vagrantfile```, thêm dòng ```config.vm.network "forwarded_port", guest: 80, host: 8080```
 để forward cổng ```8080``` từ máy client sang cổng ```80``` của server
