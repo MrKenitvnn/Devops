@@ -24,8 +24,17 @@ Tạo một thư mục riêng cho nó
 
 >$ vagrant init geerlingguy/centos7
 
-Sửa file ```Vagrantfile```, thêm dòng ```config.vm.network "forwarded_port", guest: 80, host: 8080```
-để forward cổng ```8080``` từ máy client sang cổng ```80``` của server
+#### Sửa file ```Vagrantfile```: Nếu thay đổi cần chạy lệnh: ```vagrant reload```
+để truy cập cổng ```80``` của máy server bằng cổng ```8080``` của máy developer
+```
+config.vm.network "forwarded_port", guest: 80, host: 8080
+```
+
+Synced folder ```/var/www/html``` của máy ảo server với folder ```/vmCentOS7/html``` của máy developer
+```
+config.vm.synced_folder "html/", "/var/www/html/"
+```
+
 
 Start máy ảo 
 >$ vagrant up 
@@ -59,7 +68,7 @@ Chia sẻ máy ảo
 ==> default: URL: http://intimidating-pony-6449.vagrantshare.com
 ```
 
-Từ máy cài đặt ```Vagrant``` kết nối tới máy ảo được chia sẻ
+Từ máy cài đặt ```Vagrant``` kết nối tới máy ảo server được chia sẻ
 >$ vagrant connect intimidating-pony-6449
 
 URL, cần start webserver lên 
