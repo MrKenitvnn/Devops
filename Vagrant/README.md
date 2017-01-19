@@ -63,4 +63,4 @@ Từ máy cài đặt ```Vagrant``` kết nối tới máy ảo được chia s�
 >$ vagrant connect intimidating-pony-6449
 
 URL, cần start webserver lên 
->$ http://intimidating-pony-6449.vagrantshare.com
+> http://intimidating-pony-6449.vagrantshare.com
