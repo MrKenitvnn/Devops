@@ -42,5 +42,25 @@ Truy cập vào máy ảo
 - ```vagrant reload``` : tải lại thiết lập trong file Vagrantfile 
 
 
+### 4. Chia sẻ máy ảo 
 
+Tạo tài khoản <a href="https://atlas.hashicorp.com/account/new">Atlas </a>
 
+Đăng nhập vào Vagrant Cloud
+>$ vagrant login
+
+Chia sẻ máy ảo 
+>$ vagrant share --ssh
+
+```shell
+==> default: Creating Vagrant Share session...
+    default: Share will be at: intimidating-pony-6449
+==> default: Your Vagrant Share is running! Name: intimidating-pony-6449
+==> default: URL: http://intimidating-pony-6449.vagrantshare.com
+```
+
+Từ máy cài đặt ```Vagrant``` kết nối tới máy ảo được chia sẻ
+>$ vagrant connect intimidating-pony-6449
+
+URL, cần start webserver lên 
+>$ http://intimidating-pony-6449.vagrantshare.com
